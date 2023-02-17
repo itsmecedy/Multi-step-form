@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | Multi-step form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-container">
+        <!-- side  bar -->
+        <div class="side-bar">
+          <div class="step-container">
+            <!-- step 1 -->
+            <div class="step active">
+              <div class="number">1</div>
+              <div class="step-info">
+                <span>STEP 1</span>
+                <b>YOUR INFO</b>
+              </div>
+            </div>
+            <!-- step 2 -->
+            <div class="step">
+              <div class="number">2</div>
+              <div class="step-info">
+                <span>STEP 2</span>
+                <b>SELECT PLAN</b>
+              </div>
+            </div>
+            <!-- step 3 -->
+            <div class="step">
+              <div class="number">3</div>
+              <div class="step-info">
+                <span>STEP 3</span>
+                <b>ADD-ONS</b>
+              </div>
+            </div>
+            <!-- step 4 -->
+            <div class="step">
+              <div class="number">4</div>
+              <div class="step-info">
+                <span>STEP 4</span>
+                <b>SUMMARY</b>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- right side / step form -->
+        <div class="step-form step1">
+          <div class="header">
+            <h1 class="title">Personal info</h1>
+            <p class="note">
+              Please provide your name, email address, and phone number.
+            </p>
+          </div>
+          <form>
+            <div class="label">
+              <label for="name">Name</label>
+              <p class="error">This Field Is Required</p>
+            </div>
+            <input
+              required
+              type="text"
+              id="name"
+              placeholder="e.g. Stephen King"
+            />
+            <div class="label">
+              <label for="email">Email Address</label>
+              <p class="error">This Field Is Required</p>
+            </div>
+            <input
+              required
+              type="email"
+              id="email"
+              placeholder="e.g. stephenking@lorem.com"
+            />
+            <div class="label">
+              <label for="phone">Phone Number</label>
+              <p class="error">This Field Is Required</p>
+            </div>
+            <input
+              required
+              type="tel"
+              id="phone"
+              placeholder="e.g. +1 234 567 890"
+            />
+            <button type="submit">s</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    form input {
+      padding: 1rem;
+      border: 1px solid var(--Cool-gray);
+      border-radius: 7px;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--Marine-blue);
+    }
+    form input:focus {
+      outline-color: var(--Purplish-blue);
+    }
+    .error {
+      color: var(--Strawberry-red);
+    }
+    .step-form {
+      padding: 3rem 5em;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .label {
+      color: var(--Marine-blue);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 500;
+    }
+    .header h1 {
+      color: var(--Marine-blue);
+    }
+    .header p {
+      color: var(--Cool-gray);
+    }
+    :root {
+      --Marine-blue: hsl(213, 96%, 18%);
+      --Purplish-blue: hsl(243, 100%, 62%);
+      --Pastel-blue: hsl(228, 100%, 84%);
+      --Light-blue: hsl(206, 94%, 87%);
+      --Strawberry-red: hsl(354, 84%, 57%);
+
+      --Cool-gray: hsl(231, 11%, 63%);
+      --Light-gray: hsl(229, 24%, 87%);
+      --Magnolia: hsl(217, 100%, 97%);
+      --Alabaster: hsl(231, 100%, 99%);
+      --White: hsl(0, 0%, 100%);
+    }
+  </style>
+</html>
