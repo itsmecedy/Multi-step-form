@@ -48,7 +48,8 @@
             </div>
           </div>
         </div>
-        <!-- right side / step form -->
+        <!-- Right side / step form -->
+        <!-- Step 1 -->
         <div class="step-form step1">
           <div class="header">
             <h1 class="title">Personal info</h1>
@@ -89,6 +90,63 @@
             />
           </form>
           <div class="buttons">
+            <button class="next-btn">Next Step</button>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="step-form step2">
+          <div class="header">
+            <h1 class="title">Select your plan</h1>
+            <p class="note">
+              You have the option of monthly or yearly billing.
+            </p>
+          </div>
+          <form>
+            <div class="plans">
+              <div class="plan active">
+                <img src="/assets/images/icon-arcade.svg" />
+                <div class="plan-label">
+                  <b>Arcade</b>
+                  <span class="planPrice">$9/mo</span>
+                </div>
+              </div>
+              <div class="plan">
+                <img src="/assets/images/icon-advanced.svg" />
+                <div class="plan-label">
+                  <b>Advanced</b>
+                  <span class="planPrice">$12/mo</span>
+                </div>
+              </div>
+              <div class="plan">
+                <img src="/assets/images/icon-pro.svg" />
+                <div class="plan-label">
+                  <b>Pro</b>
+                  <span class="planPrice">$15/mo</span>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="switcher">
+            <p class="monthly sw-active">Monthly</p>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <p class="yearly">Yearly</p>
+          </div>
+          <div class="buttons">
+            <button class="prev-btn">Go back</button>
+            <button class="next-btn">Next Step</button>
+          </div>
+        </div>
+        <!-- step 3 -->
+        <div class="step-form step3">
+          <div class="header">
+            <h1 class="title">Pick add-ons</h1>
+            <p class="note">Add-ons help enhance your gaming experience.</p>
+          </div>
+          <form></form>
+          <div class="buttons">
             <button class="prev-btn">Go back</button>
             <button class="next-btn">Next Step</button>
           </div>
@@ -97,8 +155,10 @@
     </div>
   </body>
   <style>
-   
-
+    .step1,
+    .step2 {
+      display: none;
+    }
     :root {
       --Marine-blue: hsl(213, 96%, 18%);
       --Purplish-blue: hsl(243, 100%, 62%);

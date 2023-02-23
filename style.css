@@ -69,9 +69,13 @@
 
 /* step info style */
 /* form  */
+
+/* step 1 */
 form {
   display: flex;
   flex-direction: column;
+  width: 500px;
+  margin-top: 1rem;
 }
 form input {
   padding: 1rem;
@@ -116,23 +120,32 @@ form input:focus {
 
 /* buttons */
 .buttons {
+  position: relative;
+  flex: 1;
   display: flex;
   justify-content: space-between;
-  margin: 4rem 0rem 0rem;
+  margin-bottom: 1rem;
 }
 .prev-btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
   color: var(--Cool-gray);
   border: none;
   background: none;
   font-size: medium;
   font-weight: 700;
   letter-spacing: 1px;
+  padding: 1rem;
 }
 .prev-btn:hover {
   color: var(--Marine-blue);
   cursor: pointer;
 }
 .next-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   color: var(--White);
   background-color: var(--Marine-blue);
   padding: 1rem;
@@ -147,3 +160,108 @@ form input:focus {
   filter: brightness(1.5);
   cursor: pointer;
 }
+
+/* step 2 */
+
+.plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.plans .active {
+  border: 2px solid;
+  border-color: var(--Purplish-blue);
+}
+.plan {
+  border: 1px solid;
+  border-color: var(--Cool-gray);
+  border-radius: 10px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.plan:hover {
+  cursor: pointer;
+}
+.plan-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.plans b {
+  color: var(--Marine-blue);
+}
+.plans span {
+  color: var(--Cool-gray);
+}
+.monthly,
+.yearly {
+  color: var(--Cool-gray);
+  font-weight: 500;
+}
+.sw-active {
+  color: var(--Marine-blue);
+}
+
+/* switch design code */
+.switcher {
+  background-color: var(--Magnolia);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 5rem;
+  justify-content: center;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--Marine-blue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* step 3 */
