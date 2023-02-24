@@ -145,7 +145,72 @@
             <h1 class="title">Pick add-ons</h1>
             <p class="note">Add-ons help enhance your gaming experience.</p>
           </div>
-          <form></form>
+          <form>
+            <div class="add-ons">
+              <!-- online service -->
+              <div class="add-on add-selected">
+                <input type="checkbox" id="online" />
+                <div class="description">
+                  <b>Online Service</b>
+                  <p>Access to multiplayer games</p>
+                </div>
+                <p class="price">+$1/mo</p>
+              </div>
+              <!-- Larger Storage -->
+              <div class="add-on">
+                <input type="checkbox" id="storage" />
+                <div class="description">
+                  <b>Larger Storage</b>
+                  <p>Extra 1TB of cloud save</p>
+                </div>
+                <p class="price">+$2/mo</p>
+              </div>
+              <!-- Customizable Profile -->
+              <div class="add-on">
+                <input type="checkbox" id="custom" />
+                <div class="description">
+                  <b>Customizable Profile</b>
+                  <p>Custom theme on your profile</p>
+                </div>
+                <p class="price">+$2/mo</p>
+              </div>
+            </div>
+          </form>
+          <div class="buttons">
+            <button class="prev-btn">Go back</button>
+            <button class="next-btn">Next Step</button>
+          </div>
+        </div>
+        <!-- step 4 -->
+        <div class="step-form step4">
+          <div class="header">
+            <h1 class="title">Finishing up</h1>
+            <p class="note">
+              Double-check everything looks OK before confirming.
+            </p>
+          </div>
+          <form>
+            <div class="confirmation">
+              <div class="selected-plan">
+                <div class="change-plan">
+                  <p class="plan-name">Arcade Monthly</p>
+                  <button>Change</button>
+                </div>
+                <p class="plan-price">$9/mo</p>
+              </div>
+              <hr />
+              <div class="addons">
+                <div class="selected-addon">
+                  <span class="service-name">Online service</span>
+                  <span class="service-price">+$1/mo</span>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="total">
+            <p>Total (per month)</p>
+            <b>+$12/mo</b>
+          </div>
           <div class="buttons">
             <button class="prev-btn">Go back</button>
             <button class="next-btn">Next Step</button>
@@ -155,8 +220,69 @@
     </div>
   </body>
   <style>
+    .service-price {
+      color: var(--Marine-blue);
+      font-weight: 500;
+    }
+    .total {
+      padding: 0rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--Cool-gray);
+    }
+    .total b {
+      color: var(--Purplish-blue);
+    }
+    .selected-addon {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      color: var(--Cool-gray);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid;
+      color: var(--Cool-gray);
+      margin: auto;
+    }
+    .confirmation {
+      padding: 1.5rem;
+      background-color: var(--Magnolia);
+      border-radius: 10px;
+      height: 100%;
+    }
+    .selected-plan {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .plan-price,
+    .plan-name {
+      font-weight: 700;
+      color: var(--Marine-blue);
+    }
+    .change-plan {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .change-plan button {
+      background-color: transparent;
+      border: none;
+      color: blue;
+      cursor: pointer;
+      text-decoration: underline;
+      display: flex;
+      right: auto;
+    }
     .step1,
-    .step2 {
+    .step2,
+    .step3 {
       display: none;
     }
     :root {

@@ -265,3 +265,43 @@ input:checked + .slider:before {
 }
 
 /* step 3 */
+.add-ons {
+  display: grid;
+  gap: 1rem;
+}
+.add-on {
+  border: 1px solid;
+  border-color: var(--Cool-gray);
+  border-radius: 7px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.add-selected {
+  border-color: var(--Purplish-blue);
+  background-color: var(--Magnolia);
+}
+.add-on input {
+  accent-color: var(--Purplish-blue);
+  transform: scale(1.3);
+  user-select: none;
+  margin: 0rem 0.5rem;
+}
+.description {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.description b {
+  color: var(--Marine-blue);
+}
+.description p {
+  color: var(--Cool-gray);
+}
+.add-on .price {
+  margin-left: auto;
+  color: var(--Purplish-blue);
+}
+
+/* Step 4 */
